@@ -25,7 +25,8 @@ class AuthController extends Controller
         ]);
     }
 
-    function logout(){
+    function logout() 
+    {
         auth()->user()->tokens()->delete();
         return response()->json(['msg' => 'You have successfully logout']);
     }
